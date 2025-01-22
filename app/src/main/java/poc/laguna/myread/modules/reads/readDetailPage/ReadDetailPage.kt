@@ -1,4 +1,4 @@
-package poc.laguna.myread.modules.reads.ui.readDetailPage
+package poc.laguna.myread.modules.reads.readDetailPage
 
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
@@ -13,10 +13,12 @@ import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.navigation.NavController
+import poc.laguna.myread.app.ui.navigation.LocalNavController
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun ReadDetailPage(bookId: String, modifier: Modifier, navController: NavController) {
+fun ReadDetailPage(bookId: String, modifier: Modifier) {
+    val navController = LocalNavController.current
     Scaffold(
         topBar = {
             TopAppBar(

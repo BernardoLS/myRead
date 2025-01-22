@@ -10,6 +10,13 @@ activityCompose = "1.8.0"
 composeBom = "2024.04.01"
 navigationCompose = "2.8.5"
 serialization = "1.6.3"
+retrofit = "2.11.0"
+retrofitGson = "2.11.0"
+okhttp3 = "4.12.0"
+okhttp3Mock = "4.12.0"
+gson = "2.11.0"
+loggingInterceptor = "4.12.0"
+koin-bom = "4.0.1"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -28,6 +35,17 @@ androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit
 androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
 androidx-navigation-compose = { group = "androidx.navigation", name = "navigation-compose", version.ref = "navigationCompose" }
 kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "serialization"}
+square-retrofit2 = { module = "com.squareup.retrofit2:retrofit", name = "retrofit", version.ref = "retrofit" }
+square-retrofit2-gson = { module = "com.squareup.retrofit2:converter-gson", name = "retrofit-gson", version.ref = "retrofitGson" }
+square-okhttp = { module = "com.squareup.okhttp3:okhttp", name = "okhttp3", version.ref = "okhttp3" }
+square-okhttp-mock = { module = "com.squareup.okhttp3:mockwebserver", name = "okhttp3-mock", version.ref = "okhttp3Mock" }
+square-okhttp-logging-interceptor = { module = "com.squareup.okhttp3:logging-interceptor", name = "logging-interceptor", version.ref = "loggingInterceptor" }
+google-gson = { module = "com.google.code.gson:gson", name = "gson", version.ref = "gson" }
+koin-bom = { module = "io.insert-koin:koin-bom", version.ref = "koin-bom" }
+koin-compose = { module = "io.insert-koin:koin-androidx-compose", version.ref = "koin-bom" }
+koin-compose-navigation = { module = "io.insert-koin:koin-androidx-compose-navigation", version.ref = "koin-bom" }
+koin-test = { module = "io.insert-koin:koin-test", version.ref = "koin-bom" }
+koin-junit4 = { module = "io.insert-koin:koin-test-junit4", version.ref = "koin-bom" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
