@@ -17,7 +17,7 @@ import poc.laguna.myread.app.ui.navigation.LocalNavController
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun ReadDetailPage(bookId: String, modifier: Modifier) {
+fun ReadDetailPage(bookId: String, modifier: Modifier = Modifier) {
     val navController = LocalNavController.current
     Scaffold(
         topBar = {
