@@ -6,7 +6,7 @@ import poc.laguna.myread.modules.reads.readsPage.data.responses.HighlightRespons
 import poc.laguna.myread.modules.reads.readsPage.data.services.ReadsPageApiService
 
 class ReadsPageRemoteDataSource(private val apiService: ReadsPageApiService) {
-    suspend fun fetchHighlights(): ResultHandler< List<HighlightResponse>> {
+    suspend fun fetchHighlights(): ResultHandler<List<HighlightResponse>> {
         return safeApiRequest { apiService.fetchHighlights() }
     }
 }

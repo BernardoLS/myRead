@@ -11,7 +11,7 @@ class ReadsPageRepository(private val dataSource: ReadsPageRemoteDataSource) : R
     override suspend fun fetchHighlights(): List<HighlightModel> {
         return when (val result = dataSource.fetchHighlights()) {
             is ResultHandler.Success -> result.value.map { it.toDomain() }
-            is ResultHandler.Error -> throw result.throwable
+            is ResultHandler.Error -> arrayListOf()
         }
     }
 }
