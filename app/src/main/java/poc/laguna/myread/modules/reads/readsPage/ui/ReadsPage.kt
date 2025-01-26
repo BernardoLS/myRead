@@ -1,5 +1,6 @@
 package poc.laguna.myread.modules.reads.readsPage.ui
 
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material3.Scaffold
@@ -34,11 +35,12 @@ fun ReadsPage(viewModel: ReadsPageViewModel = koinViewModel()) {
         ) {
             item {
                 when (val state = highlightsState) {
-                   is HighlightState.Loading -> LoadingView()
-                   is HighlightState.Success -> HighlightsCarousel(state.highlights) {
+                    is HighlightState.Loading -> LoadingView()
+                    is HighlightState.Success -> HighlightsCarousel(state.highlights) {
                        viewModel.sendIntent(ReadPageIntents.NavigateToHighlightDetail(it.id))
-                   }
-                   is HighlightState.Error -> HighlightError(state.message)
+                    }
+                    is HighlightState.Empty -> Box {  }
+                    is HighlightState.Error -> HighlightError(state.message)
                 }
             }
         }

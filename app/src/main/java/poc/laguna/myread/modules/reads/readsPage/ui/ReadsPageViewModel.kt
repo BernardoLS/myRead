@@ -36,7 +36,11 @@ class ReadsPageViewModel(private val fetchHighlightsUseCase: FetchHighlightsUseC
             }
 
             result.onSuccess {
-                _highlightsState.value = HighlightState.Success(it)
+                if (it.isEmpty()) {
+                    _highlightsState.value = HighlightState.Empty
+                } else {
+                    _highlightsState.value = HighlightState.Success(it)
+                }
             }.onFailure {
                 _highlightsState.value = HighlightState.Error(it.message ?: "Unknown error")
             }
