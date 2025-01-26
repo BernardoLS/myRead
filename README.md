@@ -17,30 +17,7 @@ Project created to practice patterns and architectures for Android Kotlin develo
 -   **Testig**: Unit and Integration tests with Robolectric, Mockk and JUnit.
 
 ## Structure
-📂 app
-├── 📂di
-│     ├── 📂AppModules.kt
-├── 📂ui
-│     ├── 📂navigation
-│           ├── 📂routeModels
-│     ├── MainActivity.kt
-│     ├── MainApplication.kt
-📂 core
-├── 📂data
-│     ├── 📂network
-│     ├── 📂wrappers
-├──📂 ui
-├── 📂components
-├── 📂theme
-📂 modules
-├── 📂discover.ui
-├── 📂groups.ui
-├── 📂reads
-├── 📂readDetailPage
-├──📂readsPage
-├── 📂data
-├── 📂domain
-├── 📂ui
+![img_1.png](img_1.png)
 ## Dependencies
 ```kotlin
 // Serialização
