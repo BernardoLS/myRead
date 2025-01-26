@@ -6,6 +6,7 @@ Project created to practice patterns and architectures for Android Kotlin develo
 - Single Activity Pattern
 - Dependency injection
 - Jetpack Compose
+- FlowState
 - Unit Testing
 ## **Functionalities**
 
