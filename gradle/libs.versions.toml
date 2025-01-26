@@ -1,13 +1,13 @@
 [versions]
 agp = "8.7.3"
 kotlin = "2.0.0"
-coreKtx = "1.10.1"
+coreKtx = "1.15.0"
 junit = "4.13.2"
-junitVersion = "1.1.5"
-espressoCore = "3.5.1"
-lifecycleRuntimeKtx = "2.6.1"
-activityCompose = "1.8.0"
-composeBom = "2024.04.01"
+junitVersion = "1.2.1"
+espressoCore = "3.6.1"
+lifecycleRuntimeKtx = "2.8.7"
+activityCompose = "1.10.0"
+composeBom = "2025.01.00"
 navigationCompose = "2.8.5"
 serialization = "1.6.3"
 retrofit = "2.11.0"
@@ -17,6 +17,12 @@ okhttp3Mock = "4.12.0"
 gson = "2.11.0"
 loggingInterceptor = "4.12.0"
 koin-bom = "4.0.1"
+roboletric = "4.10.3"
+test-core = "1.6.1"
+mockk = "1.13.4"
+mockito = "4.5.1"
+slf4j = "2.0.9"
+kotlinx-coroutines = "1.8.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -34,6 +40,7 @@ androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-man
 androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
 androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
 androidx-navigation-compose = { group = "androidx.navigation", name = "navigation-compose", version.ref = "navigationCompose" }
+androidx-test-core = { group = "androidx.test", name = "core", version.ref = "test-core" }
 kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "serialization"}
 square-retrofit2 = { module = "com.squareup.retrofit2:retrofit", name = "retrofit", version.ref = "retrofit" }
 square-retrofit2-gson = { module = "com.squareup.retrofit2:converter-gson", name = "retrofit-gson", version.ref = "retrofitGson" }
@@ -46,6 +53,12 @@ koin-compose = { module = "io.insert-koin:koin-androidx-compose", version.ref = 
 koin-compose-navigation = { module = "io.insert-koin:koin-androidx-compose-navigation", version.ref = "koin-bom" }
 koin-test = { module = "io.insert-koin:koin-test", version.ref = "koin-bom" }
 koin-junit4 = { module = "io.insert-koin:koin-test-junit4", version.ref = "koin-bom" }
+roboletric-test = { module = "org.robolectric:robolectric", version.ref = "roboletric" }
+mockk = { group = "io.mockk", name = "mockk", version.ref = "mockk" }
+mockito = { group = "org.mockito", name = "mockito-core", version.ref = "mockito" }
+slf4j = { group = "org.slf4j", name = "slf4j-simple", version.ref = "slf4j"}
+kotlinx-coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "kotlinx-coroutines" }
+kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinx-coroutines" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

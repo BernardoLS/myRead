@@ -1,3 +1,5 @@
+import com.android.build.api.dsl.Packaging
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
@@ -7,7 +9,7 @@ plugins {
 
 android {
     namespace = "poc.laguna.myread"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "poc.laguna.myread"
@@ -38,6 +40,7 @@ android {
     buildFeatures {
         compose = true
     }
+
 }
 
 dependencies {
@@ -60,10 +63,18 @@ dependencies {
     implementation(platform(libs.koin.bom))
     implementation(libs.koin.compose)
     implementation(libs.koin.compose.navigation)
+    implementation(libs.kotlinx.coroutines.core)
 
     testImplementation(libs.junit)
-    testImplementation(libs.koin.test)
+    testImplementation(libs.slf4j)
+    testImplementation(libs.kotlinx.coroutines.test)
+    androidTestImplementation(libs.koin.test)
     testImplementation(libs.koin.junit4)
+    androidTestImplementation(libs.roboletric.test)
+    androidTestImplementation(libs.androidx.test.core)
+    testImplementation(libs.mockk)
+    androidTestImplementation(libs.mockk)
+    androidTestImplementation(libs.mockito)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(platform(libs.androidx.compose.bom))
